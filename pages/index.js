@@ -187,235 +187,371 @@ export default function App() {
   }, [selectedImage]);
 
   return (
-    <div className="min-h-screen" style={{ background: "#fafaf8", fontFamily: "'DM Sans', sans-serif" }}>
-      <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+		<div
+			className="min-h-screen"
+			style={{ background: "#fafaf8", fontFamily: "'DM Sans', sans-serif" }}
+		>
+			<link
+				href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap"
+				rel="stylesheet"
+			/>
 
-      {/* Nav */}
-      <motion.nav
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="flex items-center justify-between px-8 py-5"
-        style={{ borderBottom: "1px solid #f0ede8" }}
-      >
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-lg flex items-center justify-center" style={{ background: "linear-gradient(135deg, #f97316, #ec4899)" }}>
-            <span className="text-white text-xs font-bold">@</span>
-          </div>
-          <span className="font-bold text-slate-800 text-sm tracking-tight">MailKit</span>
-        </div>
-        <motion.a
-          href="#get-access"
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.97 }}
-          className="text-sm font-semibold text-white rounded-full px-5 py-2.5"
-          style={{ background: "linear-gradient(135deg, #f97316, #ec4899)", boxShadow: "0 4px 14px rgba(249,115,22,0.35)" }}
-        >
-          Get Access →
-        </motion.a>
-      </motion.nav>
+			{/* Nav */}
+			<motion.nav
+				initial={{ opacity: 0, y: -10 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
+				className="flex items-center justify-between px-8 py-5"
+				style={{ borderBottom: "1px solid #f0ede8" }}
+			>
+				<div className="flex items-center gap-2">
+					<div
+						className="w-7 h-7 rounded-lg flex items-center justify-center"
+						style={{ background: "linear-gradient(135deg, #f97316, #ec4899)" }}
+					>
+						<span className="text-white text-xs font-bold">@</span>
+					</div>
+					<span className="font-bold text-slate-800 text-sm tracking-tight">
+						MailKit
+					</span>
+				</div>
+				<motion.a
+					href="#get-access"
+					whileHover={{ scale: 1.04 }}
+					whileTap={{ scale: 0.97 }}
+					className="text-sm font-semibold text-white rounded-full px-5 py-2.5"
+					style={{
+						background: "linear-gradient(135deg, #f97316, #ec4899)",
+						boxShadow: "0 4px 14px rgba(249,115,22,0.35)",
+					}}
+				>
+					Get Access →
+				</motion.a>
+			</motion.nav>
 
-      {/* Hero */}
-      <motion.section style={{ y: heroY }} className="text-center px-6 pt-20 pb-12 relative overflow-hidden">
-        {/* bg blobs */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 left-1/4 w-80 h-80 rounded-full blur-3xl opacity-30" style={{ background: "#fdba74" }} />
-          <div className="absolute top-20 right-1/4 w-64 h-64 rounded-full blur-3xl opacity-20" style={{ background: "#c4b5fd" }} />
-        </div>
+			{/* Hero */}
+			<motion.section
+				style={{ y: heroY }}
+				className="text-center px-6 pt-20 pb-12 relative overflow-hidden"
+			>
+				{/* bg blobs */}
+				<div className="absolute inset-0 pointer-events-none">
+					<div
+						className="absolute top-10 left-1/4 w-80 h-80 rounded-full blur-3xl opacity-30"
+						style={{ background: "#fdba74" }}
+					/>
+					<div
+						className="absolute top-20 right-1/4 w-64 h-64 rounded-full blur-3xl opacity-20"
+						style={{ background: "#c4b5fd" }}
+					/>
+				</div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6 text-xs font-semibold"
-          style={{ background: "#fff7ed", border: "1px solid #fed7aa", color: "#ea580c" }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
-          300+ Premium Email Templates
-        </motion.div>
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6 }}
+					className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6 text-xs font-semibold"
+					style={{
+						background: "#fff7ed",
+						border: "1px solid #fed7aa",
+						color: "#ea580c",
+					}}
+				>
+					<span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
+					300+ Premium Email Templates
+				</motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-slate-900 leading-none mb-6 relative"
-          style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2.8rem, 7vw, 5.5rem)", fontWeight: 900 }}
-        >
-          Emails that get
-          <br />
-          <span style={{ background: "linear-gradient(135deg, #f97316, #ec4899)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-            opened & clicked.
-          </span>
-        </motion.h1>
+				<motion.h1
+					initial={{ opacity: 0, y: 25 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.7, delay: 0.1 }}
+					className="text-slate-900 leading-none mb-6 relative"
+					style={{
+						fontFamily: "'Playfair Display', serif",
+						fontSize: "clamp(2.8rem, 7vw, 5.5rem)",
+						fontWeight: 900,
+					}}
+				>
+					Emails that get
+					<br />
+					<span
+						style={{
+							background: "linear-gradient(135deg, #f97316, #ec4899)",
+							WebkitBackgroundClip: "text",
+							WebkitTextFillColor: "transparent",
+						}}
+					>
+						opened & clicked.
+					</span>
+				</motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-slate-500 text-lg mb-10 max-w-lg mx-auto leading-relaxed"
-          style={{ fontWeight: 400 }}
-        >
-          A growing library of beautifully designed email templates across every category — ready to copy, customize, and send.
-        </motion.p>
+				<motion.p
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.2 }}
+					className="text-slate-500 text-lg mb-10 max-w-lg mx-auto leading-relaxed"
+					style={{ fontWeight: 400 }}
+				>
+					A growing library of beautifully designed email templates across every
+					category — ready to copy, customize, and send.
+				</motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-16"
-        >
-          <motion.a
-            id="get-access"
-            href="#"
-            whileHover={{ scale: 1.05, boxShadow: "0 8px 30px rgba(249,115,22,0.45)" }}
-            whileTap={{ scale: 0.97 }}
-            className="font-bold text-white rounded-full px-10 py-4 text-base relative overflow-hidden"
-            style={{ background: "linear-gradient(135deg, #f97316, #ec4899)", boxShadow: "0 4px 20px rgba(249,115,22,0.35)" }}
-          >
-            <span className="relative z-10">Get Instant Access — Pay Once</span>
-          </motion.a>
-          <span className="text-slate-400 text-sm">No subscription. No login. Just download.</span>
-        </motion.div>
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.6, delay: 0.3 }}
+					className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-16"
+				>
+					<motion.a
+						id="get-access"
+						href="#"
+						whileHover={{
+							scale: 1.05,
+							boxShadow: "0 8px 30px rgba(249,115,22,0.45)",
+						}}
+						whileTap={{ scale: 0.97 }}
+						className="font-bold text-white rounded-full px-10 py-4 text-base relative overflow-hidden"
+						style={{
+							background: "linear-gradient(135deg, #f97316, #ec4899)",
+							boxShadow: "0 4px 20px rgba(249,115,22,0.35)",
+						}}
+					>
+						<span className="relative z-10">Get Instant Access — Pay Once</span>
+					</motion.a>
+					<span className="text-slate-400 text-sm">
+						No subscription. No login. Just download.
+					</span>
+				</motion.div>
 
-        {/* Stats row */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="flex justify-center gap-12 mb-16"
-        >
-          {[["300+", "Templates"], ["8+", "Categories"], ["1×", "Payment"]].map(([num, label]) => (
-            <div key={label} className="text-center">
-              <div className="text-2xl font-black text-slate-800" style={{ fontFamily: "'Playfair Display', serif" }}>{num}</div>
-              <div className="text-xs text-slate-400 font-medium">{label}</div>
-            </div>
-          ))}
-        </motion.div>
-      </motion.section>
+				{/* Stats row */}
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ delay: 0.5, duration: 0.6 }}
+					className="flex justify-center gap-12 mb-16"
+				>
+					{[
+						["300+", "Templates"],
+						["8+", "Categories"],
+						["1×", "Payment"],
+					].map(([num, label]) => (
+						<div key={label} className="text-center">
+							<div
+								className="text-2xl font-black text-slate-800"
+								style={{ fontFamily: "'Playfair Display', serif" }}
+							>
+								{num}
+							</div>
+							<div className="text-xs text-slate-400 font-medium">{label}</div>
+						</div>
+					))}
+				</motion.div>
+			</motion.section>
 
-      {/* Marquee previews */}
-      <div className="overflow-hidden py-6 mb-6" style={{ borderTop: "1px solid #f0ede8", borderBottom: "1px solid #f0ede8", background: "#fdf8f5" }}>
-        <div className="flex gap-4" style={{ transform: `translateX(${marqueeX}px)`, width: "max-content" }}>
-          {[...previews, ...previews, ...previews, ...previews].map((p, i) => (
-            <FloatingCard key={i} preview={p} index={i % 6} />
-          ))}
-        </div>
-      </div>
+			{/* Marquee previews */}
+			<div
+				className="overflow-hidden py-6 mb-6"
+				style={{
+					borderTop: "1px solid #f0ede8",
+					borderBottom: "1px solid #f0ede8",
+					background: "#fdf8f5",
+				}}
+			>
+				<div
+					className="flex gap-4"
+					style={{
+						transform: `translateX(${marqueeX}px)`,
+						width: "max-content",
+					}}
+				>
+					{[...previews, ...previews, ...previews, ...previews].map((p, i) => (
+						<FloatingCard key={i} preview={p} index={i % 6} />
+					))}
+				</div>
+			</div>
 
-      {/* Template gallery */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-10"
-        >
-          <h2 className="text-slate-800 mb-3" style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 800 }}>
-            Browse all templates
-          </h2>
-          <p className="text-slate-400 text-base">Click any template to preview in full size.</p>
-        </motion.div>
-        {imagesLoading ? (
-          <div className="flex justify-center py-20">
-            <div className="w-10 h-10 rounded-full border-2 border-orange-400 border-t-transparent animate-spin" />
-          </div>
-        ) : images.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {images.map((img, i) => (
-              <TemplateImageCard key={img.src} image={img} index={i} onClick={setSelectedImage} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-20 text-slate-400">No template images found.</div>
-        )}
-      </section>
+			{/* Template gallery */}
+			<section className="max-w-6xl mx-auto px-6 py-16">
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5 }}
+					className="text-center mb-10"
+				>
+					<h2
+						className="text-slate-800 mb-3"
+						style={{
+							fontFamily: "'Playfair Display', serif",
+							fontSize: "2.2rem",
+							fontWeight: 800,
+						}}
+					>
+						Browse all templates
+					</h2>
+					<p className="text-slate-400 text-base">
+						Click any template to preview in full size.
+					</p>
+				</motion.div>
+				{imagesLoading ? (
+					<div className="flex justify-center py-20">
+						<div className="w-10 h-10 rounded-full border-2 border-orange-400 border-t-transparent animate-spin" />
+					</div>
+				) : images.length > 0 ? (
+					<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+						{images.map((img, i) => (
+							<TemplateImageCard
+								key={img.src}
+								image={img}
+								index={i}
+								onClick={setSelectedImage}
+							/>
+						))}
+					</div>
+				) : (
+					<div className="text-center py-20 text-slate-400">
+						No template images found.
+					</div>
+				)}
+			</section>
 
-      <AnimatePresence>
-        {selectedImage && (
-          <ImageModal image={selectedImage} onClose={() => setSelectedImage(null)} />
-        )}
-      </AnimatePresence>
+			<AnimatePresence>
+				{selectedImage && (
+					<ImageModal
+						image={selectedImage}
+						onClose={() => setSelectedImage(null)}
+					/>
+				)}
+			</AnimatePresence>
 
-      {/* Categories */}
-      <section className="max-w-3xl mx-auto px-6 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-slate-800 mb-3" style={{ fontFamily: "'Playfair Display', serif", fontSize: "2.2rem", fontWeight: 800 }}>
-            Every email, covered.
-          </h2>
-          <p className="text-slate-400 text-base">Templates for every stage of your customer journey.</p>
-        </motion.div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {categories.map((cat, i) => (
-            <CategoryPill key={cat.name} cat={cat} index={i} />
-          ))}
-        </div>
-      </section>
+			{/* Categories */}
+			<section className="max-w-3xl mx-auto px-6 py-16">
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5 }}
+					className="text-center mb-12"
+				>
+					<h2
+						className="text-slate-800 mb-3"
+						style={{
+							fontFamily: "'Playfair Display', serif",
+							fontSize: "2.2rem",
+							fontWeight: 800,
+						}}
+					>
+						Every email, covered.
+					</h2>
+					<p className="text-slate-400 text-base">
+						Templates for every stage of your customer journey.
+					</p>
+				</motion.div>
+				<div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+					{categories.map((cat, i) => (
+						<CategoryPill key={cat.name} cat={cat} index={i} />
+					))}
+				</div>
+			</section>
 
-      {/* What you get */}
-      <section className="max-w-3xl mx-auto px-6 pb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="rounded-3xl p-8 sm:p-12 text-center"
-          style={{ background: "linear-gradient(135deg, #fff7ed, #fdf4ff)", border: "1px solid #fed7aa" }}
-        >
-          <h2 className="text-slate-800 mb-4" style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 800 }}>
-            What you get
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
-            {[
-              { icon: "🖼", title: "300+ Images", desc: "High-res email template previews, organized by category" },
-              { icon: "⚡", title: "Instant Zip", desc: "One payment, instant download. No account needed." },
-              { icon: "♾", title: "Growing Library", desc: "New templates added regularly — you get updates free." },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                className="text-center p-4"
-              >
-                <div className="text-3xl mb-3">{item.icon}</div>
-                <div className="font-bold text-slate-800 mb-1 text-base">{item.title}</div>
-                <div className="text-slate-400 text-sm leading-relaxed">{item.desc}</div>
-              </motion.div>
-            ))}
-          </div>
+			{/* What you get */}
+			<section className="max-w-3xl mx-auto px-6 pb-16">
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5 }}
+					className="rounded-3xl p-8 sm:p-12 text-center"
+					style={{
+						background: "linear-gradient(135deg, #fff7ed, #fdf4ff)",
+						border: "1px solid #fed7aa",
+					}}
+				>
+					<h2
+						className="text-slate-800 mb-4"
+						style={{
+							fontFamily: "'Playfair Display', serif",
+							fontSize: "2rem",
+							fontWeight: 800,
+						}}
+					>
+						What you get
+					</h2>
+					<div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+						{[
+							{
+								icon: "🖼",
+								title: "300+ Images",
+								desc: "High-res email template previews, organized by category",
+							},
+							{
+								icon: "⚡",
+								title: "Instant Zip",
+								desc: "One payment, instant download. No account needed.",
+							},
+							{
+								icon: "♾",
+								title: "Growing Library",
+								desc: "New templates added regularly — you get updates free.",
+							},
+						].map((item, i) => (
+							<motion.div
+								key={item.title}
+								initial={{ opacity: 0, y: 15 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ delay: i * 0.1, duration: 0.5 }}
+								className="text-center p-4"
+							>
+								<div className="text-3xl mb-3">{item.icon}</div>
+								<div className="font-bold text-slate-800 mb-1 text-base">
+									{item.title}
+								</div>
+								<div className="text-slate-400 text-sm leading-relaxed">
+									{item.desc}
+								</div>
+							</motion.div>
+						))}
+					</div>
 
-          {/* CTA */}
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 35px rgba(249,115,22,0.45)" }}
-            whileTap={{ scale: 0.97 }}
-            className="inline-block font-bold text-white rounded-full px-12 py-4 text-base"
-            style={{ background: "linear-gradient(135deg, #f97316, #ec4899)", boxShadow: "0 4px 20px rgba(249,115,22,0.35)" }}
-          >
-            Pay Once, Get Everything →
-          </motion.a>
-          <div className="text-xs text-slate-400 mt-3">Secure checkout · Instant download · No subscription</div>
-        </motion.div>
-      </section>
+					{/* CTA */}
+					<motion.a
+						href="https://shreyvijayvargiya.gumroad.com/l/email-templates-that-converts"
+						whileHover={{
+							scale: 1.05,
+							boxShadow: "0 10px 35px rgba(249,115,22,0.45)",
+						}}
+						whileTap={{ scale: 0.97 }}
+						className="inline-block font-bold text-white rounded-full px-12 py-4 text-base"
+						style={{
+							background: "linear-gradient(135deg, #f97316, #ec4899)",
+							boxShadow: "0 4px 20px rgba(249,115,22,0.35)",
+						}}
+					>
+						Pay Once, Get Everything →
+					</motion.a>
+					<div className="text-xs text-slate-400 mt-3">
+						Secure checkout · Instant download · No subscription
+					</div>
+				</motion.div>
+			</section>
 
-      {/* Footer */}
-      <footer className="text-center pb-10 text-slate-400 text-xs" style={{ borderTop: "1px solid #f0ede8", paddingTop: 24 }}>
-        <div className="flex items-center justify-center gap-2 mb-2">
-          <div className="w-5 h-5 rounded-md flex items-center justify-center" style={{ background: "linear-gradient(135deg, #f97316, #ec4899)" }}>
-            <span className="text-white text-xs font-bold">@</span>
-          </div>
-          <span className="font-semibold text-slate-600 text-sm">MailKit</span>
-        </div>
-        300+ email templates for teams who care about design.
-      </footer>
-    </div>
-  );
+			{/* Footer */}
+			<footer
+				className="text-center pb-10 text-slate-400 text-xs"
+				style={{ borderTop: "1px solid #f0ede8", paddingTop: 24 }}
+			>
+				<div className="flex items-center justify-center gap-2 mb-2">
+					<div
+						className="w-5 h-5 rounded-md flex items-center justify-center"
+						style={{ background: "linear-gradient(135deg, #f97316, #ec4899)" }}
+					>
+						<span className="text-white text-xs font-bold">@</span>
+					</div>
+					<span className="font-semibold text-slate-600 text-sm">MailKit</span>
+				</div>
+				300+ email templates for teams who care about design.
+			</footer>
+		</div>
+	);
 }
