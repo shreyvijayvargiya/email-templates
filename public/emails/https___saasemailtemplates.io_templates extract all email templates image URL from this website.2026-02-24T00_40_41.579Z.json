@@ -1,0 +1,142 @@
+{
+  "id": "019c8d17-5548-70df-af9a-b313dad4c923",
+  "startedAt": "2026-02-24T00:40:41.579Z",
+  "endedAt": "2026-02-24T00:40:44.207Z",
+  "endpoint": "search",
+  "formState": {
+    "extractSetupCompleted": false,
+    "urls": [],
+    "extractSchema": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "company_mission": {
+          "type": "string"
+        },
+        "supports_sso": {
+          "type": "boolean"
+        },
+        "is_open_source": {
+          "type": "boolean"
+        },
+        "is_in_yc": {
+          "type": "boolean"
+        }
+      }
+    },
+    "extractPrompt": "Extract the company details, following the schema.",
+    "enableWebSearch": false,
+    "constrainUrls": false,
+    "options": {
+      "onlyMainContent": false,
+      "parsePDF": true,
+      "stealthMode": false,
+      "excludeTags": [],
+      "includeTags": [],
+      "waitFor": "",
+      "timeout": "",
+      "maxAge": "2 days",
+      "ignoreSitemap": false,
+      "crawlEntireDomain": false,
+      "sitemap": "include",
+      "limit": "10",
+      "maxDepth": "",
+      "excludePaths": [],
+      "includePaths": [],
+      "includeSubdomains": false,
+      "search": "",
+      "scrapeContentFromSearchResults": true,
+      "timeBasedSearch": "",
+      "location": "",
+      "prompt": ""
+    },
+    "formats": [],
+    "sources": [
+      "web"
+    ],
+    "categories": [],
+    "jsonSchema": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "company_name": {
+          "type": "string"
+        },
+        "company_description": {
+          "type": "string"
+        }
+      }
+    },
+    "jsonPrompt": "",
+    "agent": {},
+    "url": "https://saasemailtemplates.io/templates extract all email templates image URL from this website",
+    "endpoint": "search"
+  },
+  "status": "success",
+  "version": "ZslzCw3xBXzG9KSiIeJ_j",
+  "isPreview": false,
+  "web": [
+    {
+      "url": "https://saasemailtemplates.io/templates",
+      "title": "SaaS Email Templates & Examples",
+      "description": "Discover hundreds of the best free, downloadable SaaS email templates and examples created by leading SaaS companies for your design inspiration!",
+      "position": 1
+    },
+    {
+      "url": "https://saasemailtemplates.io/templates/marketing",
+      "title": "SaaS Marketing Email Templates & Examples",
+      "description": "Discover hundreds of the best free, downloadable marketing email templates and examples created by leading SaaS companies for your design inspiration!",
+      "position": 2
+    },
+    {
+      "url": "https://saasemailtemplates.io/templates/onboarding/welcome",
+      "title": "SaaS Welcome Email Templates & Examples",
+      "description": "Discover hundreds of the best free, downloadable welcome email templates and examples created by leading SaaS companies for your design inspiration!",
+      "position": 3
+    },
+    {
+      "url": "https://saasemailtemplates.io/templates/onboarding/account-setup",
+      "title": "SaaS Account Setup Email Templates & Examples",
+      "description": "Discover hundreds of the best free, downloadable account setup email templates and examples created by leading SaaS companies for your design inspiration!",
+      "position": 4
+    },
+    {
+      "url": "https://saasemailtemplates.io/templates/transactional",
+      "title": "SaaS Transactional Email Templates & Examples",
+      "description": "Discover hundreds of the best free, downloadable transactional email templates and examples created by leading SaaS companies for your design inspiration!",
+      "position": 5
+    },
+    {
+      "url": "https://saasemailtemplates.io/templates/transactional/free-trial-start",
+      "title": "SaaS Free Trial Start Email Templates & Examples",
+      "description": "Discover hundreds of the best free, downloadable free trial start email templates and examples created by leading SaaS companies for your design inspiration!",
+      "position": 6
+    },
+    {
+      "url": "https://saasemailtemplates.io/templates/transactional/dunning",
+      "title": "SaaS Dunning Email Templates & Examples",
+      "description": "Discover hundreds of the best free, downloadable dunning email templates and examples created by leading SaaS companies for your design inspiration!",
+      "position": 7
+    },
+    {
+      "url": "https://saasemailtemplates.io/templates/onboarding/personal-intro",
+      "title": "SaaS Personal Intro Email Templates & Examples",
+      "description": "Discover hundreds of the best free, downloadable personal intro email templates and examples created by leading SaaS companies for your design inspiration!",
+      "position": 8
+    },
+    {
+      "url": "https://saasemailtemplates.io/templates/onboarding/schedule-demo",
+      "title": "SaaS Schedule Demo Email Templates & Examples",
+      "description": "Discover hundreds of the best free, downloadable schedule demo email templates and examples created by leading SaaS companies for your design inspiration!",
+      "position": 9
+    },
+    {
+      "url": "https://www.salescaptain.io/blog/saas-email-templates",
+      "title": "SaaS Email Templates That Actually Work: The Only Guide ...",
+      "description": "Steal high-performing SaaS email templates for cold outreach, onboarding, renewals, and upsells. Real examples, tools, and tips to boost ...",
+      "position": 10
+    }
+  ],
+  "news": [],
+  "images": []
+}
