@@ -216,7 +216,7 @@ export default function App() {
 					</span>
 				</div>
 				<motion.a
-					href="#get-access"
+					href="https://shreyvijayvargiya.gumroad.com/l/email-templates-that-converts"
 					whileHover={{ scale: 1.04 }}
 					whileTap={{ scale: 0.97 }}
 					className="text-sm font-semibold text-white rounded-full px-5 py-2.5"
@@ -304,7 +304,7 @@ export default function App() {
 				>
 					<motion.a
 						id="get-access"
-						href="#"
+						href="https://shreyvijayvargiya.gumroad.com/l/email-templates-that-converts"
 						whileHover={{
 							scale: 1.05,
 							boxShadow: "0 8px 30px rgba(249,115,22,0.45)",
