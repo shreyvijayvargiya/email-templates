@@ -1,6 +1,6 @@
 -- ============================================
 -- Supabase Database Migration Script
--- SAAS starter CMS - Simple table structures
+-- Email templates CMS - Simple table structures
 -- ============================================
 
 -- Enable UUID extension

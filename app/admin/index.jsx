@@ -198,7 +198,7 @@ const Admin = () => {
 
 				if (response.ok) {
 					toast.success(
-						`Email sent successfully to ${data.stats.successCount} subscribers!`
+						`Email sent successfully to ${data.stats.successCount} subscribers!`,
 					);
 					// Update email in Firestore
 					await markEmailAsSent(email.id, data.stats.successCount);
@@ -244,7 +244,7 @@ const Admin = () => {
 
 				if (response.ok) {
 					toast.success(
-						`Email sent successfully to ${data.stats.successCount} users!`
+						`Email sent successfully to ${data.stats.successCount} users!`,
 					);
 					// Update email in Firestore
 					await markEmailAsSent(email.id, data.stats.successCount);
@@ -293,7 +293,7 @@ const Admin = () => {
 									className="text-xs w-full flex items-center gap-2 px-3 py-2 bg-white border border-zinc-200 rounded-xl hover:bg-zinc-50 transition-colors"
 								>
 									<RocketIcon className="w-3.5 h-3.5" />
-									SAAS Starter Admin
+									Email templates Admin
 								</motion.button>
 							</div>
 							<div className="space-y-1">
@@ -446,7 +446,7 @@ const Admin = () => {
 														whileHover={{ backgroundColor: "#f4f4f5" }}
 														onClick={() => {
 															toast.info(
-																"Add New Project feature coming soon!"
+																"Add New Project feature coming soon!",
 															);
 															setIsProjectDropdownOpen(false);
 														}}
@@ -639,7 +639,7 @@ const Admin = () => {
 													// Add your buy template link here
 													window.open(
 														"https://your-template-link.com",
-														"_blank"
+														"_blank",
 													);
 												}}
 												className="flex items-center gap-2 px-4 py-1.5 text-sm bg-zinc-900 text-white rounded-xl hover:bg-zinc-800 transition-colors font-medium"
